@@ -14,7 +14,8 @@
 %>
 
 <h1>회원목록!!</h1>
-<%=request.getAttribute("userId") %>님 hi!!
+<%=request.getAttribute("userId") %>님 hi!! <a href="logout.jsp">로그아웃</a>
+
 <table>
 	<tr>
 		<th>이름</th>

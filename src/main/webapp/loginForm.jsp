@@ -8,6 +8,13 @@
 </head>
 <body>
 <h1>로그인</h1>
+<%
+	String msg = (String)session.getAttribute("msg");
+	session.removeAttribute("msg");
+	if(msg != null){
+%>
+<%=msg %>
+<%} %>
 <form action="login.jsp">
 	아이디 : <input type="text" name="id"><br>
 	비밀번호 : <input type="password" name="password"><br>

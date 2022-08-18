@@ -17,10 +17,16 @@
     } else {
         //아이디, 비번 맞는 사용자
         //상태유지해주면 된다
+        /*쿠키를 이용한 상태정보유지!!
         Cookie cookie = new Cookie("login",id);
         cookie.setPath("/");
         cookie.setMaxAge(-1);
         response.addCookie(cookie);
+        */
+
+        //세션을 이용하는 코드로 변경
+        //jsp는 세션이 이미 정의되어 있음
+        session.setAttribute("login", id);
         response.sendRedirect("memberList");
     }
 
